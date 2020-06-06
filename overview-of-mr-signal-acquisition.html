@@ -142,14 +142,14 @@ function myFunctionFB(){
 								<p style="text-align:justify;">
 								I’ve spent much of the past few months learning about different imaging
 								strategies that aim to achieve this elusive goal.
-								Through this blog series, I aim to provide an overview of image acquisition and
+								Through this blog series, I will provide an overview of image acquisition and
 								reconstruction methods used in structural MRI, ranging from canonical
 								to cutting-edge approaches. This is inspired in part by a recent
 								<a href="https://arxiv.org/pdf/1903.03510.pdf" style="color:#1E90FF"> review article</a>,
 								which offers a bird’s-eye view of existing optimization
 								frameworks for image reconstruction. In the first installment of
-								this series, I introduce the MR signal model and motivate the need
-								for accelerated imaging.
+								this series, I introduce fundamental concepts in MR signal acquisition
+								and motivate the for accelerated imaging.
 								</p>
 
 								</br></br>
@@ -180,7 +180,8 @@ function myFunctionFB(){
 								</br></br>
 
 															<div class="blog-post-image">
-															<img src="blogposts/Brian_overview_of_mr_signal_acquisition/mri_img_ksp.png" class="center_blog_post" alt="Blog Image 3">
+															<img title = "Planewave adapted from https://www.photo-lovers.org/waves-planar.shtml.en"
+															src="blogposts/Brian_overview_of_mr_signal_acquisition/mri_planewave.png" class="center_blog_post" alt="Blog Image 3">
 								</div>
 
 								</br></br>
@@ -188,24 +189,31 @@ function myFunctionFB(){
 															<p style="text-align:justify;">
 								<!-- <p style="text-align:justify;"> -->
 							  Within \(k\)-space, the low spatial frequencies capture the smooth underlying
-							  structure observed in the image, giving rise to its overall contours.
+							  structures observed in the image, giving rise to its overall contours.
 							  In contrast, high spatial frequencies account for the fine details of the image,
-							  suc as edges and intricate textures. Given a "well-sampled" \(k\)-space
+							  such as edges and intricate textures. Given a "well-sampled" \(k\)-space
 							  that falls on a regular Cartesian grid, we can simply retrieve our image
 							  by applying the inverse Fourier transform (IFT) to our acquired
 							  k-space data. But what constitutes a "well-sampled" \(k\)-space?
 								</p>
 
-								</br></br>
+							</br></br>
+
+														<div class="blog-post-image">
+														<img src="blogposts/Brian_overview_of_mr_signal_acquisition/signal_sampling.gif" class="center_blog_post" alt="animated">
+							</div>
+
+							</br></br>
+								<!-- </br></br> -->
 
 								<p style="text-align:justify;">
 								<i style="font-size:17px;">Sampling k-space</i>
 							  </p>
 
 								<p style="text-align:justify;">
-							  Acquiring an MR image involves making discrete, digitize samples of k-space.
+							  Acquiring an MR image involves making discrete, digitized samples of k-space.
 							  As a property of the FT, the resolution of the MR image, say, along the
-							  \(x\)-dimension (\(\delta{x}\)) will be inversely propoertional to
+							  \(x\)-dimension (\(\delta{x}\)) will be inversely proportional to
 							  the chosen sampling step-size along the \(k_x\) dimension (\(\delta{k_x}\)).
 							  In particular, \( \delta{k_x} = {1 \over {N_x * \delta{x}}}\) where \( N_x \)
 							  is the number of pixels along the \( x \)-dimension of the image;
@@ -213,6 +221,16 @@ function myFunctionFB(){
 							  this dimension (\( FOV_x\)). As such, the choice of \(k\)-space sampling
 							  step-size determines the \(FOV\) of the resulting image.
 								</p>
+
+							</br></br>
+
+														<div class="blog-post-image">
+														<img title = "Image adapted from Deshmane et al 2012, doi:10.1002/jmri.23639"
+														src="blogposts/Brian_overview_of_mr_signal_acquisition/mri_img_ksp_discrete.png" class="center_blog_post" alt="Blog Image 3">
+							</div>
+
+							</br></br>
+
 
 								<p style="text-align:justify;">
 							  Here we come to the
@@ -230,7 +248,8 @@ function myFunctionFB(){
 							  \( \delta{k}\) that would allow for proper image reconstruction. If we choose
 							  an insufficiently small \( \delta{k}\) and attempt to reconstruct our image,
 							  the signal aliasing that arises from violating the Shannon-Nyquist
-							  Sampling Theorem will manifest as image artifacts.
+							  Sampling Theorem will manifest as
+								<a href="https://radiopaedia.org/articles/aliasing-in-mri#:~:text=Aliasing%20in%20MRI%2C%20also%20known,other%20side%20of%20the%20image." style="color:#1E90FF"> image artifacts</a>.
 								</p>
 
 								</br></br>
