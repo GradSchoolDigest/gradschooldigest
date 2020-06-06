@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Grad School Digest - Sleep and Cardiovascular disease</title>
+<title>Grad School Digest - Overview of MR Signal Acquisition </title>
 <!--
 
 -->
@@ -20,8 +20,11 @@
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="shortcut icon" href="images/IconGSD.png"> 
+<link rel="shortcut icon" href="images/IconGSD.png">
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 function myFunctionFB(){
 	var x = document.URL;
@@ -75,13 +78,15 @@ function myFunctionFB(){
 
 <!-- Home Section -->
 
-<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Cathy_sleep_and_cardiovascular_diseases/dog_pic.png')">
+<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Brian_overview_of_mr_signal_acquisition/brain_bkg_pic.png')">
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
 
                <div class="col-md-12 col-sm-12">
-                    <h2>SLEEP AND CARDIOVASCULAR DISEASE?</h2>
+                    <h2>TACKLING MRI RECONSTRUCTION
+											</br></br>
+											PART I: AN OVERVIEW OF MR SIGNAL ACQUISITION </h2>
                </div>
 
           </div>
@@ -116,71 +121,160 @@ function myFunctionFB(){
                          <div class="blog-post-format">
                             <!--  <span><a href="about.html#folks"><img src="images/Jenna2.jpg" class="img-responsive img-circle"> JP </a></span> -->
 							<center>
-                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> June 05, 2020 </span>
+                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> June 06, 2020 </span>
 							</center>
                             <!--  <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span> -->
                          </div>
 
                          <div class="blog-post-des">
+
                               <p style="text-align:justify;">
-								Do you ever wake up and have your morning coffee and suddenly ponder why you may be tired? It’s likely that the cup of coffee you had won’t make up for the that fact that you had less sleep than the recommended seven hours a night for people aged 18-65 years old. At first glance, a few nights without a lot of sleep may not seem overly detrimental to your overall health, but it can definitely become a larger issue when you chronically lack sleep or if you have insomnia or other sleep disorders such as sleep apnea where your breathing starts and stops at night.
+								Much has changed since the early days of MRI, when the pioneers of
+								the field – among them, Raymond Damadian, Paul Lauterbur, and
+								Peter Mansfield – first grappled with the inherent speed bottleneck
+								of MR imaging. Modern MRI has benefited from the accumulation of
+								technological advances and ingenious imaging strategies developed
+								over the past 4 decades. MRI researchers continue to push for faster
+								image acquisitions, attempting to strike a tricky balance between
+								improving scan time efficiency and preserving image quality.
 							  </p>
+
+								<p style="text-align:justify;">
+								I’ve spent much of the past few months learning about different imaging
+								strategies that aim to achieve this elusive goal.
+								Through this blog series, I aim to provide an overview of image acquisition and
+								reconstruction methods used in structural MRI, ranging from canonical
+								to cutting-edge approaches. This is inspired in part by a recent
+								<a href="https://arxiv.org/pdf/1903.03510.pdf" style="color:#1E90FF"> review article</a>,
+								which offers a bird’s-eye view of existing optimization
+								frameworks for image reconstruction. In the first installment of
+								this series, I introduce the MR signal model and motivate the need
+								for accelerated imaging.
+								</p>
+
+								</br></br>
+
+								<p style="text-align:justify;">
+								<i style="font-size:17px;">MR Signal Acquisition</i>
+							  </p>
+
+								<p style="text-align:justify;">
+								During an MRI scan, the signals we acquire correspond to the spatial
+								frequency components (referred to as
+								<a href="http://mriquestions.com/what-is-k-space.html" style="color:#1E90FF"> \(k\)-space</a>
+								) of the image we want to obtain.
+							  This is mathematically represented by the MR signal equation,
+							  which relates our acquired signal \(s(\vec{k})\)
+							  and the desired image \(m(\vec{r})\):
+
+							  \[s(\vec{k}) = \int_V {m(\vec{r})
+							  e^{-i2 \pi \vec{k} \dot{} \vec{r}} d\vec{r}} .\]
+
+							  This equation describes a
+								<a href="http://mriquestions.com/fourier-transform-ft.html"style="color:#1E90FF"> Fourier Transform</a>
+								Fourier Transform
+								(FT) that maps
+							  between the image domain (\(\vec{r}\)) and k-space (\(\vec{k}\)).
+								</p>
+
+								</br></br>
+
+															<div class="blog-post-image">
+															<img src="blogposts/Brian_overview_of_mr_signal_acquisition/mri_img_ksp.png" class="center_blog_post" alt="Blog Image 3">
+								</div>
+
+								</br></br>
+
+															<p style="text-align:justify;">
+								<!-- <p style="text-align:justify;"> -->
+							  Within \(k\)-space, the low spatial frequencies capture the smooth underlying
+							  structure observed in the image, giving rise to its overall contours.
+							  In contrast, high spatial frequencies account for the fine details of the image,
+							  suc as edges and intricate textures. Given a "well-sampled" \(k\)-space
+							  that falls on a regular Cartesian grid, we can simply retrieve our image
+							  by applying the inverse Fourier transform (IFT) to our acquired
+							  k-space data. But what constitutes a "well-sampled" \(k\)-space?
+								</p>
+
+								</br></br>
+
+								<p style="text-align:justify;">
+								<i style="font-size:17px;">Sampling k-space</i>
+							  </p>
+
+								<p style="text-align:justify;">
+							  Acquiring an MR image involves making discrete, digitize samples of k-space.
+							  As a property of the FT, the resolution of the MR image, say, along the
+							  \(x\)-dimension (\(\delta{x}\)) will be inversely propoertional to
+							  the chosen sampling step-size along the \(k_x\) dimension (\(\delta{k_x}\)).
+							  In particular, \( \delta{k_x} = {1 \over {N_x * \delta{x}}}\) where \( N_x \)
+							  is the number of pixels along the \( x \)-dimension of the image;
+							  multiplying \( N_x * \delta{x}\) gives us the field-of-view along
+							  this dimension (\( FOV_x\)). As such, the choice of \(k\)-space sampling
+							  step-size determines the \(FOV\) of the resulting image.
+								</p>
+
+								<p style="text-align:justify;">
+							  Here we come to the
+								<a href="https://www.allaboutcircuits.com/technical-articles/nyquist-shannon-theorem-understanding-sampled-systems/" style="color:#1E90FF"> Shannon-Nyquist Sampling Theorem</a>
+								, which governs what
+							  it means to have a "well-sampled" \(k\)-space. In general, this theorem states
+							  that an analog signal needs to be sampled at a rate at least twice as large
+							  as the highest frequency contained in the signal. If we fall short of this criterion,
+							  the digitized signal will be \( \it{aliased}\) - it no longer accurately represents the
+							  original signal.
+								</p>
+
+								<p style="text-align:justify;">
+							  In the context of MRI, this theorem places an upper bound on the value of
+							  \( \delta{k}\) that would allow for proper image reconstruction. If we choose
+							  an insufficiently small \( \delta{k}\) and attempt to reconstruct our image,
+							  the signal aliasing that arises from violating the Shannon-Nyquist
+							  Sampling Theorem will manifest as image artifacts.
+								</p>
+
+								</br></br>
+
+								<p style="text-align:justify;">
+								<i style="font-size:17px;">Towards Accelerated Imaging</i>
+							  </p>
+
+								<p style="text-align:justify;">
+							  Due to the Shannon-Nyquist Sampling Theorem, there is a minimum \(k\)-space
+							  sampling density to be met if we wish to carry out the standard FT-based
+							  image reconstruction. How quickly an image can be acquired is then determined
+							  by the hardware limitations of the MRI scanner. Considering an image with a
+							  reasonable matrix size of \( 256 \times 256 \times 192 \) pixels, this amounts
+							  to over \(12.6\) million \(k\)-space samples. Rather than resigning to abide
+							  by the speed limits set by MRI hardware, several approaches to overcome the
+							  Shannon-Nyquist Sampling criterion have been proposed over the years.
+							  In the next installment of this series, I will cover two of the most influential
+							  approaches: parallel imaging and compressed sensing.
+								</p>
+
                             <!--  <blockquote>Insert some random quote here. </blockquote> -->
-							
+
+
 							  </br></br>
-							  
-                              <div class="blog-post-image">
-                              <img src="blogposts/Cathy_sleep_and_cardiovascular_diseases/dog_pic.png" class="center_blog_post" alt="Blog Image 3">
-							  </div>
-							  
-							  </br></br>
-							
-                              <p style="text-align:justify;">
-								Cardiovascular disease aka heart disease is the leading cause of death worldwide and the 2nd leading cause of death in Canada [1], [2]. Sleep plays an important role in cardiovascular disease and is recognized by the American Heart Association as a core health behaviour that is an important component in cardiovascular health. A lot of the distractions or stressors in our life contribute to our quality and lack of sleep, such as pressures from work and the amount of screen time spent scrolling on Instagram or watching Tiktok videos.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Your autonomic nervous system is composed of the sympathetic system (fight or flight) and parasympathetic system (rest and digest). Dysregulation of the autonomic system in individuals with insomnia has been associated with sleep disturbance- associated cardiovascular disease. Particularly, it is the increase in the sympathetic tone and decrease in the parasympathetic tone leading to an increase in cardiovascular risk. Studies have shown that individuals with short sleep (routinely sleeping less than six hours a day) and a disrupted circadian rhythm had decreased heart rate variability, increased sympathetic and decreased parasympathetic cardiac tone [3].
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Another measure used to reflect autonomic function is systolic blood pressure (this is when your heart is contracting). Typically when we sleep our systolic blood pressure decreases by roughly 10%. Individuals with chronic insomnia don’t experience much of a dip and have an overall higher 24 systolic blood pressure relative to individuals who get good sleep. The lack of dip in systolic blood pressure during may be associated with cardiovascular risk.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Short sleep, difficulty initiating sleep and difficulty maintaining sleep have contributed to an increased risk of cardiovascular events such as a heart attack especially in those with coronary artery disease (CAD). There are also linkages between short sleep and irregular heart rhythms such as atrial fibrillation.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Studies have shown that experiments that limit the sleep of individuals, resulted in hormonal imbalances, increased insulin resistance and increases in appetite due to the increase in the appetite stimulating hormone, Ghrelin. Multiple meta-analyses with self-reported short sleep have been associated with an increased risk of metabolic syndrome.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Overall, literature has shown that short sleep and insomnia over a short period of time affect your autonomic nervous system, whereas chronic lack of sleep can lead to more serious conditions such as metabolic syndrome and coronary artery disease.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								With the pandemic and ongoing current events it may be difficult to maintain a sleep schedule but it would be a good idea to attempt maintaining a sleep schedule that is consistent but also works best for you.
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								In addition if you’re experiencing odd dreams during quarantine, and if you would like to read about other people’s quarantine dreams or submit an odd quarantine dream of you own: <cite><a href = "https://www.idreamofcovid.com/dreams">https://www.idreamofcovid.com/dreams</a></cite>.
-							  </p>
-							  
-							  </br></br>
-							  
-							  <h5>REFERENCES</h5>
-							  
+
+							  <h5>ADDITIONAL RESOURCES</h5>
+
 							  <ol style="text-align:justify;">
-								<li>Public Health Agency of Canada, “Heart Disease in Canada,” Diseases and conditions, 2017. [Online]. Available: <cite><a href = "https://www.canada.ca/en/public-health/services/publications/diseases-conditions/heart-disease-canada.html" style="color:#1E90FF">https://www.canada.ca/en/public-health/services/publications/diseases-conditions/heart-disease-canada.html </a></cite>[Accessed: 18-Mar-2020]</li></br>
-								<li>C. G. Hsieh and J. L. Martin, “Short Sleep, Insomnia, and Cardiovascular Disease,” Curr. Sleep Med. Reports, vol. 5, no. 4, pp. 234–242, 2019.</li></br>
-								<li>J.-A. Palma et al., “Increased Sympathetic and Decreased Parasympathetic Cardiac Tone in Patients with Sleep Related Alveolar Hypoventilation,” Sleep, vol. 36, no. 6, pp. 933–940, 2013.</li></br>
-							  </ol> 
-							  
+								<li>Deshmane A et al. Parallel MR Imaging. J. Magn Reson. Imaging.
+									2012;36:55-72. doi:10.1002/jmri.23639</li></br>
+								<li>Hollingsworth KG. Reducing acquisition time in clinical MRI
+									by data undersampling and compressed sensing reconstruction.
+									Phys. Med. Biol. 2016;60:297-322. doi:10.1088/0031-9155/60/21/R297</li></br>
+								<li>Lustig M et al. Sparse MRI: The Application of Compressed
+									Sensing for Rapid MR Imaging. Magn. Reson. Med. 2007;58:1182-1195.
+									doi:10.1002/mrm.21391</li></br>
+								<li>Nishimura DG. Principles of Magnetic Resonance Imaging. 1996.</li></br>
+							  </ol>
+
 							<div class="row-md-3 row-sm-3">
-								<i class="fa fa-tag" style="font-size:18px";> <a href = "gallery.html#gallery"><span class = "badge">Cardiovascular Sciences</span></a>
-								<a><span class = "badge">Sleep</span></a></i>
-								<a><span class = "badge">Quarantine</span></a></i>
+								<i class="fa fa-tag" style="font-size:18px";> <a href = "gallery.html#gallery"><span class = "badge">MRI</span></a>
+								<a><span class = "badge">Image Acquisition</span></a></i>
+								<a><span class = "badge">Image Artifacts</span></a></i>
 								<div class="social-icon">
 									 <h5><span class="tab">Share</span>
 								<!--	 <span class="tab"><a href="http://www.facebook.com/sharer.php?u=https://designyourownblog.com/html-and-css-design-bloggers-guide/" class="fa fa-facebook"></a></span> -->
@@ -190,14 +284,14 @@ function myFunctionFB(){
 									 </h5>
 								</div>
 							</div>
-                         
+
                             <!--  <h3>What is Personal Blog Theme?</h3>
                               <p>Nulla tincidunt eu velit elementum accumsan. Vivamus euismod tempor interdum. Vivamus non scelerisque ex, et interdum leo. In bibendum lacus vitae felis egestas, at consectetur metus facilisis. Morbi tellus dolor, porta dignissim enim sit amet, dapibus sagittis erat. In blandit elit sit amet dui aliquet congue nec vel quam. Integer id tristique libero.</p>
                          -->
 						 </div>
-						 
-                         
-                         
+
+
+
 <!--
                          <div class="blog-single-post-image">
                               <div class="col-md-4 col-sm-4">
@@ -212,19 +306,19 @@ function myFunctionFB(){
                          </div>
                          <p>Aliquam blandit velit nisi, sed fringilla felis lacinia sed. Integer vitae porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tristique lacus. Suspendisse ut tortor vitae risus lacinia tristique. Aliquam sed consectetur libero.</p>
                          -->
-						 
+
 						 <div class="blog-author">
                               <div class="media">
                                    <div class="media-object pull-left">
-                                        <a href="about.html#folks"><img src="images/Cathy.jpg" class="img-circle img-responsive" alt="blog"></a>
+                                        <a href="about.html#folks"><img src="images/Brian2.jpg" class="img-circle img-responsive" alt="blog"></a>
                                    </div>
                                    <div class="media-body">
-                                        <h3 class="media-heading"><a href="about.html#folks">Cathy Ong-Ly</a></h3>
+                                        <h3 class="media-heading"><a href="about.html#folks">Brian Nghiem</a></h3>
                                         <p>Author</p>
                                    </div>
                               </div>
                          </div>
-						 
+
 <!--
                          <div class="blog-comment">
                               <h3>Comments</h3>
@@ -322,7 +416,7 @@ function myFunctionFB(){
                          <li><a href="#" class="fa fa-linkedin"></a></li>
                     </ul>
                </div> -->
-               
+
           </div>
      </div>
 </footer>
