@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Grad School Digest - Neuroscience and Artificial Intelligence: Part 1 – A Primer</title>
+<title>Grad School Digest - Two-Photon Excitation Microscopy: Looking Beneath the Surface</title>
 <!--
 
 -->
@@ -81,13 +81,13 @@ function myFunctionFB(){
 
 <!-- Home Section -->
 
-<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Labeeb_GSD_1_neuroscience_ai/_Background Image.png')">
+<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Matt_GSD_1_two_photon_excitation_microscopy/picture1.jpg')">
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
 
                <div class="col-md-12 col-sm-12">
-                    <h2>NEUROSCIENCE AND ARTIFICIAL INTELLIGENCE: PART 1 – A PRIMER</h2>
+                    <h2>TWO-PHOTON EXCITATION MICROSCOPY: LOOKING BENEATH THE SURFACE</h2>
                </div>
 
           </div>
@@ -122,56 +122,57 @@ function myFunctionFB(){
                          <div class="blog-post-format">
                             <!--  <span><a href="about.html#folks"><img src="images/Jenna2.jpg" class="img-responsive img-circle"> JP </a></span> -->
 							<center>
-                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> July 17, 2020 </span>
+                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> July 11, 2020 </span>
 							</center>
                             <!--  <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span> -->
                          </div>
 
                          <div class="blog-post-des">
                               <p style="text-align:justify;">
-								When considering the sheer complexity of the brain, an interesting quote by Emerson Pugh always comes to mind:</p>
-								
-                            <blockquote>“If the human brain were so simple that we could understand it, we would be so simple that we couldn’t.”</blockquote>
-							  
+								Fluorophores have long enabled biologists to localize and quantify features present in a given
+sample. Proteins and dyes capable of fluorescence can be used to stain targets in a sample or
+introduced into your sample’s genome and colocalized with a target protein as a marker of that
+protein’s expression. Targets that are selected for analysis with fluorescent molecules are not
+always perfectly flat and 3d information can be useful in determining the function of the target
+that a fluorophore labels. Two-photon fluorescent microscopy takes advantage of a reduction
+in scattering of light in the infrared range in tissue to view fluorophores beneath the surface of
+a sample.
+</p>
+								  
 							  <p style="text-align:justify;">
-								It’s an apt illustration of the challenge neuroscientists faces in pursuit of understanding the brain, as we strive to answer questions like “where does consciousness come from?” or “why do we dream?”
-								</p>
+								Electrons are capable of moving to different energy levels after receiving a specific amount of
+energy. When relaxing back into their resting energy levels they sometime emit a photon in the
+visible light range. Fluorophores are molecules that are capable of emitting a photon after
+receiving a photon of greater energy than the photon they emit. The energy a photon can be
+calculated by multiplying Plank’s constant by the speed of light and dividing by the wavelength:</p>
+								
+								<p style="text-align:center;">
+								\[E = \frac{hc}{\lambda}\]
+							  </p>
 								
 								<p style="text-align:justify;">
-								Some of this complexity stems from the structure of the brain itself. An average of 86 billion neurons [1] and 100 to 1000 trillion synapses [2] form the circuitry. 163 brain regions interacting to form 111 functional networks serve the basis for cognition and behavior [3]. More impressively, the brain is <i>constantly changing</i>; whether it be as a result of synaptic pruning due to aging, synaptic plasticity in response to learning, or chemical imbalances associated with psychiatric illness. Modeling the brain to capture this level of intricacy from the molecular level to that of large-scale networks is no small feat. Despite the ability to sample neural activity at a fraction of a millisecond or visualize interacting brain regions at the resolution of millimeters, how do we model this information and use it to explain phenomena we observe on a daily basis?
+								There are cases where a fluorophore can emit a photon without having come into contact with a single photon at the correct excitation wavelength. In Dirac’s 1927 paper <i>The Quantum Theory of Dispersion</i> he noted that a few terms of one of his equations would correspond to two light quanta being simultaneously absorbed, but also noted that they would not contribute to the overall result as this event is highly unlikely [1]. Maria Goppert-Mayer described this two-photon excitation fully in her 1931 dissertation [2]. When absorbing two photons simultaneously each photon would need to have half the energy for excitation, or twice the wavelength by the above equation.
 								</p>
 							  
 							  </br></br>
 							  
                               <div class="blog-post-image">
-                              <img src="blogposts/Labeeb_GSD_1_neuroscience_ai/figure 1.png" class="center_blog_post" alt="Blog Image 3">
+                              <img src="blogposts/Matt_GSD_1_two_photon_excitation_microscopy/picture1.jpg" class="center_blog_post" alt="Blog Image 3">
 							  </div>
 							  
 							  <p style="text-align:center;">
-								Figure 1: Diffusion Tensor Imaging (DTI) revealing white matter connections between various brain regions. From: Medical Daily.
+								Figure 1: From Two-Photon Excitation Microscopy for the Study of Living Cells and Tissues [3].
 							  </p>
 							  
 							  </br></br>
 							  
 							  <p style="text-align:justify;">
-								<i style="font-size:17px;">Artificial Intelligence to explain…human intelligence?</i>
-							  </p>
-							  
-							  <p style="text-align:justify;">
-								Artificial intelligence (A.I.) has been making massive headlines in recent years. It was only 23 years ago IBM’s Deep Blue defeated Garry Kasparov at chess, the world campion at the time. Now, A.I. applications range from autonomous driving, speech recognition, and medical diagnosis. A.I. refers to the intelligent execution of a task. One application involves creating models based on information, such as meteorological (weather) information or pictures of animals. In turn, the type of information you provide your model with determines the type of predictions it makes, like next week’s temperature or distinguishing dogs from cats. One of the defining paradigm shifts separating earlier iterations of A.I. to the ones performing impressive feats today is their <strong>ability to learn</strong>. Previously, knowledge would be pre-programmed into these models, preventing them for generating their own abstractions or drawing novel solutions. The rise of <strong>machine learning</strong> has provided models with the necessary inductive capabilities to learn from the data they’re provided, allowing them to improve. Imagine if you were to provide a model with fMRI data from thousands of patients with a particular psychiatric illness over a period of time; hypothetically, it is possible that a model could learn of early predictors for the illness from seemingly healthy patients. In practice, its not that simple (a discussion for another post)
+								In order for two photon absorption to take place, the fluorophore and 2 photons have to be in the same place at the same time, much less than 1 femtosecond (10e-15). In order to make this event of two photons and a fluorophore meeting in such a short time possible, Winfreid Denk implemented high power femtosecond pulsed lasers [4]. These lasers release large quantities of photons in short bursts of about 100 femtoseconds and are focused on a small region of interest [4]. When the light emitted by the laser has twice the wavelength generally required for fluorescence, two-photon fluorescence is possible. Denk coupled this two-photon excitation with laser scanning microscopy where an entire image is acquired by excitation at small regions throughout the target. 
 								</p>
-								
-							  </br></br>
 							  
-                              <div class="blog-post-image">
-                              <img src="blogposts/Labeeb_GSD_1_neuroscience_ai/figure 1.png" class="center_blog_post" alt="Blog Image 3">
-							  </div>
-							  
-							  <p style="text-align:center;">
-								Figure 1: Diffusion Tensor Imaging (DTI) revealing white matter connections between various brain regions. From: Medical Daily.
-							  </p>
-							  
-							  </br></br>
+							  <p style="text-align:justify;">
+								The main benefit of this method is that it allows for longer wavelengths to be used to excite the fluorophores, notably in the near infrared range.  Wavelengths in this part of the spectrum do not scatter in tissue as much as wavelengths in the visible range do.  This allows for two-photon microscopy to image beneath the surface up to a few millimetres beneath the surface.
+								</p>
 							  
 							  <p style="text-align:justify;">
 								More information on two-photon microscopy can be found at the following links:<br>
