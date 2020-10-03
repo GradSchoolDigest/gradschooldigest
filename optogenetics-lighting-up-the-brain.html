@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Grad School Digest - Optogenetics: Lighting up the brain</title>
+<!--
+
+-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="images/IconGSD.png"> 
+
+<script>
+function myFunctionFB(){
+	var x = document.URL;
+	document.getElementById("fb").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+	document.getElementById("twitter").src = 'https://twitter.com/intent/tweet?original_referer='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+<!--	document.getElementById("link").href = "https://www.linkedin.com/shareArticle?mini=true&url="+x+"&title=Check%20this%20out&source=" -->
+}
+</script>
+
+<script>
+
+</script>
+	
+<script id="dsq-count-scr" src="//gradschooldigest.disqus.com/count.js" async></script>
+
+</head>
+<body onload="myFunctionFB()">
+
+<!-- PRE LOADER -->
+
+<div class="preloader">
+     <div class="sk-spinner sk-spinner-wordpress">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<!-- Navigation section  -->
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+     <div class="container">
+
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+            <!--   <a href="index.html" class="navbar-brand">Grad School Digest</a> -->
+			<a href="index.html"><img src="images/icon3.jpg" class="img-responsive"></a>
+          </div>
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+				<!--	<li><a href="art.html">Art</a></li> -->
+                    <li><a href="gallery.html">Topics</a></li>
+					<li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+               </ul>
+          </div>
+
+  </div>
+</div>
+
+<!-- Home Section -->
+
+<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Jacob_optogenetics/Desktop_cov.png')">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h2>Optogenetics: Lighting up the brain</h2>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Blog Single Post Section -->
+
+<section id="blog-single-post">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="blog-single-post-thumb">
+                     <!--   <span class="likebtn-wrapper" data-identifier="item_1"></span>
+						<script>
+						(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;
+							a=d.createElement(e);
+							m=d.getElementsByTagName(e)[0];
+							a.async=1;a.id="likebtn_wjs";
+							a.src=s;
+							m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");
+						</script> -->
+
+                        <!-- <div class="blog-post-title">
+							  <center>
+								<h2>How do we know genes are encoded in DNA?</a></h2>
+							  </center>
+                         </div>
+						 -->
+
+                         <div class="blog-post-format">
+                            <!--  <span><a href="about.html#folks"><img src="images/Jenna2.jpg" class="img-responsive img-circle"> JP </a></span> -->
+							<center>
+                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> October 02, 2020 </span>
+							</center>
+                            <!--  <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span> -->
+                         </div>
+
+                         <div class="blog-post-des">
+                              <p style="text-align:justify;">
+				      				When it comes to applying electrodynamics to advance our understanding of physiology, the brain ranks among the most common applications. This doesn’t come as much of a surprise; the brain is a dense collection of neurons which fire electrical signals (action potentials) to communicate with other downstream neurons or tissues. The regulation of the volume and rhythm of firing is responsible for how we move, how we speak, and how we breathe. The dysfunction of firing, occurring through various mechanisms, is the cause of many neurological disorders, especially those defined by motion and sensory abnormalities. Take for example multiple sclerosis, a disorder characterized by the loss of myelin around neurons in the central nervous system, resulting in weakened neuronal activity and motor dysfunction [1]. Clearly, the regulated firing in populations of neurons can be viewed as a potential end-goal in clinical neuroscience, but how do we go about arriving at this desired outcome?
+									</p>
+                            <!--  <blockquote>Insert some random quote here. </blockquote> -->
+							
+                              <p style="text-align:justify;">
+				      				There have been a variety of proposed methods throughout the years, including electrical stimulation of neuronal populations and pharmaceutical control. One method which has recently received a lot of coverage is <strong><i>optogenetics</i></strong>. While the name itself might be off-putting and distressing, I can assure you that the general mechanism is quite straight forward. Optogenetics is a way to control neuronal activity through the use of light and genetic engineering [2]. Now, how can light possibly control the activity of the brain? First, remember that the brain is composed of <i>populations</i> of neurons; many of these populations are unique from one another in that they express different proteins. Also take note that neurons communicate with each other by releasing neurotransmitters which bind to the receptors of downstream neurons. These neurons then respond by opening neuronal channels, allowing for either an inhibitory ion influx (ions which result in cell inhibition) or an excitatory influx (ions which result in cell excitation), depending on which type of neuronal channel is present. Receptors and channels come in a variety of forms, responsive to a wide array of ligands; it turns out that there are receptors, known as opsins, that are responsive to <strong><i>light</i></strong> [2]. Some examples of these receptors, along with the wavelength of light which controls them, are shown in section A of the figure below.
+									</p>
+								
+							  </br></br>
+							  
+                              <div class="blog-post-image">
+                              <img src="blogposts/Jacob_optogenetics/Desktop_cov.png" class="center_blog_post" alt="Blog Image 3" style = "width:460px;height:230px;">
+							  </div>
+							  
+							  </br></br>
+							  
+							  <p style="text-align:justify;">
+								  While the brain doesn’t have receptors/channels which can ‘see’ and respond to light, that doesn’t mean they can’t be introduced to specific neuronal populations of the brain. With the advent of genetic engineering, there have been numerous methods proposed to deliver particular genes of interest to specific cellular populations; the general mechanism is seen in section B of the figure above [2]. Essentially, a viral vector can be used to deliver a particular gene (one that encodes an opsin) to a targeted neuronal group, which is denoted by its associated promoter sequence. Once delivered, light of the correct activation wavelength can be directed to a particular brain region of interest, containing the targeted neuronal population. Depending on the type of opsin gene introduced into a given cell type, we can either stimulate or inhibit neuronal activity. What I’ll introduce next is a vast oversimplification, but it gets to the heart of how optogenetics works in a particular scenario. Let’s say we want to stimulate a group of dopaminergic neurons in the brain. We can deliver an opsin – say, one that stimulates neuronal activity (such as ChR2) – attached to an upstream promoter specific for dopaminergic neurons (such as Drd1) into a mouse model. Then, depending on the region of interest, we can stereotactically introduce a light diode or probe. From there, we can specifically turn on or off the targeted neurons with the flick of a switch!
+									</p>
+									
+							  </br></br>
+							  
+                              <div class="blog-post-image">
+                              <img src="blogposts/Jacob_optogenetics/Picture1.png" class="center_blog_post" alt="Blog Image 3" style = "width:365px;height:138px;">
+							  </div>
+								  
+							  </br></br>
+							  
+							  <p style="text-align:justify;">
+								Where do methods such as electrical or pharmacological control stand in comparison to optogenetics? While optogenetics is not without its pitfalls, it is spatially and temporally superior to the pharmacological and electrical methods [3]. Its comparison to electrical stimulation is delineated in the figure above [3]. As shown, electrical stimulation is spatially imprecise, activating all neurons in a given target area. In contrast, optogenetic stimulation will only target the neurons encoding a particular opsin channel. With regard to pharmacological control, optogenetics is temporally superior as stimulation/inhibition can be modulated with the flick of a switch, whereas pharmaceuticals are inherently slower to take effect and persist longer than intended [4].								</p>
+							  
+							  <p style="text-align:justify;">
+								Throughout this read, I hope that you have developed an understanding of how optogenetics works and its potential applications. I also hope that you’ve garnered some excitement about this topic. While there are many factors which still need to be addressed in the full optimization of optogenetics, it has proven itself to be a very promising technique and shows great potential for further applications. If you are interested in reading about a particular application of optogenetics in depression research, take a look at this <cite><a href="https://padlet.com/jacob_schulman/uyh37qajn403" style="color:#1E90FF"><strong><i>padlet</i></strong></a></cite> that I worked on with a group of students last year!
+								</p>
+							  
+							  </br></br>
+							  							  
+							  <h5>REFERENCES</h5>
+							  
+							  <ol style="text-align:justify;">
+								<li>Quintana FJ, Farez MF, Weiner HL. Systems biology approaches for the study of multiple sclerosis. 2008;12(4):1087–1093.</li></br>
+								<li>Pama EAC, Colzato LS, Hommel B. Optogenetics as a neuromodulation tool in cognitive neuroscience. 2013;4.</li></br>
+								<li>Forcelli PA. Applications of optogenetic and chemogenetic methods to seizure circuits: Where to go next? 2017;95(12):2345–2356.</li></br>
+								<li><cite><a href="https://kids.frontiersin.org/article/10.3389/frym.2017.00051" style="color:#1E90FF">What Is Optogenetics and How Can We Use It to Discover More About the Brain?</a></cite> [accessed 2020 Sep 18].</li></br>
+							  </ol> 
+							  
+							<div class="row-md-3 row-sm-3">
+								<i class="fa fa-tag" style="font-size:18px";> <a href = "gallery.html#gallery"><span class = "badge">Neuroscience</span></a>
+								<a><span class = "badge">Optogenetics</span></a></i>
+								<a><span class = "badge">Brain</span></a></i>
+								<div class="social-icon">
+									 <h5><span class="tab">Share</span>
+								<!--	 <span class="tab"><a href="http://www.facebook.com/sharer.php?u=https://designyourownblog.com/html-and-css-design-bloggers-guide/" class="fa fa-facebook"></a></span> -->
+								<!--	 <a id="linkedin" href="" target="_blank" rel="nofollow""><span class="btn-linkedin btn-lg"><i class="fa fa-linkedin"></i> LinkedIn</span></a> -->
+									 <span class="tab"><iframe id = "fb" src = "" width = "83" height = "28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></span>
+									 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+									 </h5>
+								</div>
+							</div>
+                         
+                            <!--  <h3>What is Personal Blog Theme?</h3>
+                              <p>Nulla tincidunt eu velit elementum accumsan. Vivamus euismod tempor interdum. Vivamus non scelerisque ex, et interdum leo. In bibendum lacus vitae felis egestas, at consectetur metus facilisis. Morbi tellus dolor, porta dignissim enim sit amet, dapibus sagittis erat. In blandit elit sit amet dui aliquet congue nec vel quam. Integer id tristique libero.</p>
+                         -->
+						 </div>
+						 
+                         
+                         
+<!--
+                         <div class="blog-single-post-image">
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image1.jpg" class="img-responsive" alt="Blog Image 1">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image2.jpg" class="img-responsive" alt="Blog Image 2">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image3.jpg" class="img-responsive" alt="Blog Image 3">
+                              </div>
+                         </div>
+                         <p>Aliquam blandit velit nisi, sed fringilla felis lacinia sed. Integer vitae porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tristique lacus. Suspendisse ut tortor vitae risus lacinia tristique. Aliquam sed consectetur libero.</p>
+                         -->
+						 
+						 <div class="blog-author">
+                              <div class="media">
+                                   <div class="media-object pull-left">
+                                        <a href="about.html#folks"><img src="images/Jacob.jpg" class="img-circle img-responsive" alt="blog"></a>
+                                   </div>
+                                   <div class="media-body">
+                                        <h3 class="media-heading"><a href="about.html#folks">Jacob Schulman</a></h3>
+                                        <p>Author</p>
+                                   </div>
+                              </div>
+                         </div>
+						 
+<!--
+                         <div class="blog-comment">
+                              <h3>Comments</h3>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/comment-image1.jpg" class="img-responsive img-circle" alt="Blog Image 11">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">David Jones</h3>
+                                             <span>3 days ago</span>
+                                             <p>Aliquam gravida arcu at risus blandit, in interdum metus varius. Cras efficitur, ex sit amet tincidunt rhoncus, dui ex hendrerit risus, ac dapibus ligula mi id leo. In auctor dui justo, ac consequat dui posuere ac.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/comment-image2.jpg" class="img-responsive img-circle" alt="Blog Image 22">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Omar Larus</h3>
+                                             <span>5 days ago</span>
+                                             <p>Maecenas ultricies ante dignissim, iaculis ligula sed, gravida ipsum. Pellentesque lobortis velit mi, sed volutpat enim facilisis.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/author-image2.jpg" class="img-responsive img-circle" alt="Blog Image 33">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Walker Jen</h3>
+                                             <span>July 27, 2017</span>
+                                             <p>In eu posuere nulla, sit amet semper lectus. Aliquam gravida arcu at risus blandit, in interdum metus varius. Cras efficitur, ex sit amet tincidunt rhoncus, dui ex hendrerit risus, ac dapibus ligula mi id leo.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/author-image1.jpg" class="img-responsive img-circle" alt="Blog Image 44">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Jen Lopez</h3>
+                                             <span>July 24, 2017</span>
+                                             <p>In auctor dui justo, ac consequat dui posuere ac. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur.</p>
+                                        </div>
+                                   </div>
+                         </div>
+-->
+
+			<div class="blog-comment">
+						   <!--   <h3>Comments</h3> -->
+							   <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://gradschooldigest.github.io/gradschooldigest/optogenetics-lighting-up-the-brain.html';  // Replace PAGE_URL with your page's canonical URL variable
+//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gradschooldigest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+						 </div>			
+
+                         <div class="blog-comment-form">
+                              <h3>Feedback Form</h3>
+                                   <form action="mailto:gradschooldigest@gmail.com" method="post" enctype="text/plain">
+                           	 	 	 	<input type="text" class="form-control" placeholder="Name" name="name" required>
+                                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="Message" message="message" required="required"></textarea>
+                                        <div class="col-md-3 col-sm-4">
+                                             <input name="submit" type="submit" class="form-control" id="submit" value="Send">
+                                        </div>
+                                   </form>
+                         </div>
+                    </div>
+          </div>
+     </div>
+</section>
+
+<!-- Footer Section -->
+
+<footer>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-md-offset-1 col-sm-6">
+                    <h3>Grad School Digest</h3>
+                 <!--   <p>elkwqjlqwdoqwj;dfqwk'pdfkqw
+					'dkqw
+					'dkqw'qw;dk;owqkd;oqwkjd;oqw;j mjflqw;jd;lqwjd;wqd;lqwkm;ldqwm;ldmqw;ldm;lqwdm;lqw</p> -->
+                    <div class="footer-copyright">
+                         <p>Copyright &copy; GSD</p>
+                    </div>
+               </div>
+
+               <div class="col-md-4 col-md-offset-1 col-sm-6">
+                    <h3>Reach out</h3>
+                <!--    <p><i class="fa fa-instagram"></i> *insta handle goes here* </p>
+                    <p><i class="fa fa-twitter"></i> *twitter handle goes here* </p> -->
+                    <p><i class="fa fa-envelope"></i> gradschooldigest@gmail.com </p>
+               </div>
+
+               <div class="clearfix col-md-12 col-sm-12">
+                    <hr>
+               </div>
+			<!--
+               <div class="col-md-12 col-sm-12">
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-google-plus"></a></li>
+                         <li><a href="#" class="fa fa-dribbble"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+               </div> -->
+               
+          </div>
+     </div>
+</footer>
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
