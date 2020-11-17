@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Grad School Digest - Tapping into Your Blood: Detecting Cancer through Liquid Biopsies </title>
+<!--
+
+-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="images/IconGSD.png">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+function myFunctionFB(){
+	var x = document.URL;
+	document.getElementById("fb").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+	document.getElementById("twitter").src = 'https://twitter.com/intent/tweet?original_referer='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+<!--	document.getElementById("link").href = "https://www.linkedin.com/shareArticle?mini=true&url="+x+"&title=Check%20this%20out&source=" -->
+}
+</script>
+
+<script>
+
+</script>
+
+<script id="dsq-count-scr" src="//gradschooldigest.disqus.com/count.js" async></script>
+
+</head>
+<body onload="myFunctionFB()">
+
+<div class="preloader">
+     <div class="sk-spinner sk-spinner-wordpress">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+     <div class="container">
+
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+			<a href="index.html"><img src="images/icon3.jpg" class="img-responsive"></a>
+          </div>
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Topics</a></li>
+					<li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+               </ul>
+          </div>
+
+  </div>
+</div>
+
+<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Sasha_liquid_biopsy/fig1.png')">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h2>TAPPING INTO YOUR BLOOD <h3>DETECTING CANCER THROUGH LIQUID BIOPSIES </h3> </h2>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<section id="blog-single-post">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="blog-single-post-thumb">
+                         <div class="blog-post-format">
+							<center>
+                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> November 17, 2020 </span>
+							</center>
+                         </div>
+
+                         <div class="blog-post-des">
+
+                <p style="text-align:justify;">
+								Our blood is a bountiful source of information that cancer researchers
+								and clinicians have been tapping into for over a century. For instance,
+								many cancer <b>biomarkers</b> (quantifiable indicators of cancer presence)
+								can be found in blood and are useful in making clinical decisions [1].
+								It is important to note, though, that biomarkers aren’t only found
+								in blood. For example, a CT scan or molecular profiling of a tissue
+								biopsy may also act as cancer biomarkers [1,2].
+							  </p>
+
+								<p style="text-align:justify;">
+								One of the first cancer biomarkers I learned about was the prostate-specific
+								antigen (PSA), when unfortunately, my father was diagnosed
+								with prostate cancer. PSA is a protein secreted by the prostate,
+								and in healthy men only small amounts circulate the bloodstream.
+								When the PSA level in blood rises, it may indicate prostate cancer [3].
+								In my father’s case, testing for PSA allowed for early
+								detection of his cancer and led to a successful treatment.
+								However, PSA isn’t a perfect biomarker since it’s not specific
+								to prostate cancer. For example, some men may have increased PSA
+								levels due to an inflamed prostate or a urinary tract infection.
+								Because of this, increased PSA levels aren’t enough to diagnose
+								prostate cancer, so physicians must take a tissue biopsy of the
+								prostate to investigate further [3].
+								</p>
+
+								<p style="text-align:justify;">
+								Blood-derived cancer biomarkers have many uses beyond early disease
+								detection – they can help with formulating a diagnosis, providing
+								insight into clinical outcomes, or predicting a patient’s response
+								to a particular treatment. Also, cancer biomarkers aren’t restricted
+								to proteins (like PSA); other cellular, genomic, transcriptomic
+								and metabolomic biomarkers may be found in blood as well [1,2].
+								</p>
+
+								<p style="text-align:justify;">
+								For this article, I’m going to narrow in on an exciting and relatively
+								new cancer biomarker: <b>circulating tumour DNA</b> (ctDNA). When cells die,
+								they release fragments of cell-free DNA (cfDNA) into the body’s
+								circulatory system; when these fragments originate from cancer cells,
+								they are called ctDNA. These fragments encode key information about
+								the specific cancer, making them more favourable biomarkers compared
+								to indirect approaches, such as PSA or radiographic images.
+								The genetic mutations in ctDNA directly reflect mutations found
+								in the tumour, which means that ctDNA can provide similar molecular
+								profiling as a tissue biopsy [2,4]. That’s why blood tests to detect
+								ctDNA are called <b>liquid biopsies</b>.
+								</p>
+
+							</br></br>
+														<div class="blog-post-image">
+														<img src="blogposts/Sasha_liquid_biopsy/fig1.png"
+														class="center_blog_post" alt="Blog Image 1">
+							</div>
+
+							<p style="text-align:center;">
+							<strong>Figure 1.</strong> Blood contains a wealth of information
+							about a person's health. Liquid biopsies can capture ctDNA circulating
+							in a patient’s blood. Created in BioRender.
+							</p>
+
+							</br></br>
+
+							<p style="text-align:justify;">
+						  You may be thinking “If we can already get the same information from
+							a tissue biopsy, what’s the point of doing liquid biopsies?”. However,
+							liquid biopsies have some important benefits to keep in mind. The most
+							obvious advantage is that liquid biopsies are easily obtained through
+							non-invasive means [4]. For many cancer types, tissue biopsies can be
+							difficult to obtain and a pain in the butt for patients (<i>quite
+							literally for prostate cancer, sorry dad</i>). These invasive procedures
+							also carry additional risks, such as postoperative infection. As a
+							result, doctors are reluctant to repeat them, such as when monitoring
+							treatment response. In contrast, liquid biopsies are easily obtained
+							with a routine blood draw, which are less risky and cost far less.
+							They can be easily repeated as needed for monitoring progression,
+							drug response, and relapse [4].
+							</p>
+
+							<p style="text-align:justify;">
+						  Another benefit of liquid biopsies is that they provide a more comprehensive
+							view of the disease. It is important to understand that tumours can be
+							<a href="https://en.wikipedia.org/wiki/Tumour_heterogeneity"
+							style="color:#1E90FF"> heterogeneous</a>
+							– in other words, different regions of the tumour might
+							exhibit different characteristics because of their respective genetic
+							mutations and local environment, to name a few contributing factors.
+							<b>Tumour heterogeneity</b> remains an important challenge in treating cancers
+							since the whole tumour might not respond to a given treatment uniformly
+							well [5]. Heterogeneity poses an issue for tissue biopsies, since typically
+							only a small portion of the tumour is sampled. Consequently, a tissue
+							biopsy might fail to reflect heterogeneity within the tumour [4]. This was
+							initially the case with my father’s prostate cancer. When he was diagnosed,
+							they could not explain the rapid PSA increase compared to the low
+							<a href="https://www.cancer.ca/en/cancer-information/cancer-type/prostate/grading/?region=on"
+							style="color:#1E90FF"> Gleason score</a>
+							of his prostate biopsies. A subsequent MRI revealed some cancer
+							cells lying outside the normal sampling areas. As a result, another
+							biopsy was conducted in this area, revealing a much more aggressive
+							and fast-growing cancer. With liquid biopsies, most cells from the
+							tumour contribute to the cfDNA pool, so a liquid biopsy should reflect
+							the full diversity of the cancer [4].
+							</p>
+
+							<p style="text-align:justify;">
+						  Building on this concept, liquid biopsies may encompass ctDNA from
+							metastatic sites as well, typically well before the metastases are
+							apparent through imaging. Liquid biopsies provide insight into <i>spatial
+							and temporal</i> tumour heterogeneity at multiple sites throughout the
+							body [2,4]. My father had his prostate removed, leaving behind nothing
+							to biopsy; however, a liquid biopsy can monitor whether the cancer
+							had metastasized prior to the prostatectomy (hopefully not). This
+							particularly emphasizes why liquid biopsies are a valuable tool,
+							even in cancers where it’s easy to take a tissue biopsy
+							(like breast cancer).
+							</p>
+
+							</br></br>
+														<div class="blog-post-image">
+														<img src="blogposts/Sasha_liquid_biopsy/fig2.png"
+														class="center_blog_post" alt="Blog Image 1">
+							</div>
+							<p style="text-align:center;">
+							<strong>Figure 2.</strong> Liquid biopsies carry many advantages
+							that make them an attractive compared to standard tissue biopsies.
+							Created in BioRender.
+							</p>
+							</br></br>
+
+							<p style="text-align:justify;">
+							It may sound like liquid biopsies are pure gold, but there are caveats.
+							One main challenge is detection sensitivity when there’s low amounts
+							of ctDNA in the blood [2,4]. The amount of ctDNA varies depending on
+							tumor size, vascularity, other anatomical features, and the patient’s
+							history of treatments (if they’ve had any) [4]. So depending on the
+							clinical setting, particularly in cancer screening or relapse detection,
+							there may be low amounts of ctDNA. Fortunately, continual development
+							of various
+							<a href="https://en.wikipedia.org/wiki/Polymerase_chain_reaction#:~:text=Polymerase%20chain%20reaction%20(PCR)%20is,amount%20to%20study%20in%20detail."
+							style="color:#1E90FF"> PCR</a>
+							and
+							<a href="https://www.ebi.ac.uk/training-beta/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/"
+							style="color:#1E90FF"> next-generation sequencing</a>
+							techniques are improving
+							the sensitivity of ctDNA detection [2,4].
+							</p>
+
+							<p style="text-align:justify;">
+						  All in all, tumour tissue biopsies won’t be disappearing anytime soon,
+							but liquid biopsies are an exciting area for growth. There are many
+							clinical settings where they could be applicable, such as cancer screening,
+							therapy selection, monitoring treatment response, or monitoring recurrence [2,4].
+							Commercial companies see this value, and tons of money have been invested
+							into developing technologies for ctDNA testing, some of which are in the
+							clinic already. I hope you can see the value as well, and that you enjoyed
+							reading this simple introduction to liquid biopsies and ctDNA. If you
+							still have reservations about liquid biopsies, just think – which would
+							you prefer: a blood test or getting a hunk of tissue taken out of you?
+							</p>
+
+							</br></br>
+
+						  <h5>ADDITIONAL RESOURCES</h5>
+
+						  <ol style="text-align:justify;">
+							<li>Henry, N. L. & Hayes, D. F. Cancer biomarkers. Mol. Oncol. 6, 140–146 (2012).</li></br>
+							<li>Cescon, D. W., Bratman, S. V., Chan, S. M. & Siu, L. L. Circulating tumor DNA and liquid biopsy in oncology. Nat. Cancer 1, 276–290 (2020).</li></br>
+							<li>
+								<a href="https://www.cancer.ca/en/cancer-information/diagnosis-and-treatment/tests-and-procedures/prostate-specific-antigen-psa/?region=on"
+								style="color:#1E90FF"> Prostate-specific antigen (PSA) test</a>. Canadian Cancer Society.
+								</li></br>
+							<li>Wan, J. C. M. et al. Liquid biopsies come of age: Towards implementation of circulating tumour DNA. Nat. Rev. Cancer 17, 223–238 (2017).</li></br>
+							<li>Dagogo-Jack, I. & Shaw, A. T. Tumour heterogeneity and resistance to cancer therapies. Nat. Rev. Clin. Oncol. 15, 81-94(2018).</li></br>
+						  </ol>
+
+							<div class="row-md-3 row-sm-3">
+								<i class="fa fa-tag" style="font-size:18px";> <a href = "gallery.html#gallery"><span class = "badge">Cancer Diagnosis & Therapy</span></a>
+								<a><span class = "badge">Cancer Detection</span></a></i>
+								<a><span class = "badge">Molecular Oncology</span></a></i>
+								<div class="social-icon">
+									 <h5><span class="tab">Share</span>
+									 <span class="tab"><iframe id = "fb" src = "" width = "83" height = "28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></span>
+									 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+									 </h5>
+								</div>
+							</div>
+						 </div>
+						 <div class="blog-author">
+                              <div class="media">
+                                   <div class="media-object pull-left">
+                                        <a href="about.html#folks"><img src="images/Sasha.png" class="img-circle img-responsive" alt="blog"></a>
+                                   </div>
+                                   <div class="media-body">
+                                        <h3 class="media-heading"><a href="about.html#folks">Sasha Main</a></h3>
+                                        <p>Author</p>
+                                   </div>
+                              </div>
+                         </div>
+
+			<div class="blog-comment">
+						   <!--   <h3>Comments</h3> -->
+							   <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://gradschooldigest.github.io/gradschooldigest/sources-of-radiation.html';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gradschooldigest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						 </div>
+                         <div class="blog-comment-form">
+                              <h3>Feedback Form</h3>
+                                   <form action="mailto:gradschooldigest@gmail.com" method="post" enctype="text/plain">
+                           	 	 	 	<input type="text" class="form-control" placeholder="Name" name="name" required>
+                                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="Message" message="message" required="required"></textarea>
+                                        <div class="col-md-3 col-sm-4">
+                                             <input name="submit" type="submit" class="form-control" id="submit" value="Send">
+                                        </div>
+                                   </form>
+                         </div>
+                    </div>
+          </div>
+     </div>
+</section>
+
+<!-- Footer Section -->
+
+<footer>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-md-offset-1 col-sm-6">
+                    <h3>Grad School Digest</h3>
+                    <div class="footer-copyright">
+                         <p>Copyright &copy; GSD</p>
+                    </div>
+               </div>
+
+               <div class="col-md-4 col-md-offset-1 col-sm-6">
+                    <h3>Reach out</h3>
+                    <p><i class="fa fa-envelope"></i> gradschooldigest@gmail.com </p>
+               </div>
+
+               <div class="clearfix col-md-12 col-sm-12">
+                    <hr>
+               </div>
+          </div>
+     </div>
+</footer>
+
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
