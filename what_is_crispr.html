@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Grad School Digest - What is CRISPR? A discussion on the science of gene editing</title>
+<!--
+
+-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="images/IconGSD.png"> 
+
+<script>
+function myFunctionFB(){
+	var x = document.URL;
+	document.getElementById("fb").src = 'https://www.facebook.com/plugins/share_button.php?href='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+	document.getElementById("twitter").src = 'https://twitter.com/intent/tweet?original_referer='+x+'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId';
+<!--	document.getElementById("link").href = "https://www.linkedin.com/shareArticle?mini=true&url="+x+"&title=Check%20this%20out&source=" -->
+}
+</script>
+
+<script>
+
+</script>
+	
+<script id="dsq-count-scr" src="//gradschooldigest.disqus.com/count.js" async></script>
+
+</head>
+<body onload="myFunctionFB()">
+
+<!-- PRE LOADER -->
+
+<div class="preloader">
+     <div class="sk-spinner sk-spinner-wordpress">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<!-- Navigation section  -->
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+     <div class="container">
+
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+            <!--   <a href="index.html" class="navbar-brand">Grad School Digest</a> -->
+			<a href="index.html"><img src="images/icon3.jpg" class="img-responsive"></a>
+          </div>
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+				<!--	<li><a href="art.html">Art</a></li> -->
+                    <li><a href="gallery.html">Topics</a></li>
+					<li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+               </ul>
+          </div>
+
+  </div>
+</div>
+
+<!-- Home Section -->
+
+<section id="home" class="main-single-post parallax-section" style="--url: url('../blogposts/Kate_What_is_CRISPR/main_pic.jpg')">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h2>What is CRISPR? A discussion on the science of gene editing.</h2>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Blog Single Post Section -->
+
+<section id="blog-single-post">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="blog-single-post-thumb">
+                     <!--   <span class="likebtn-wrapper" data-identifier="item_1"></span>
+						<script>
+						(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;
+							a=d.createElement(e);
+							m=d.getElementsByTagName(e)[0];
+							a.async=1;a.id="likebtn_wjs";
+							a.src=s;
+							m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");
+						</script> -->
+
+                        <!-- <div class="blog-post-title">
+							  <center>
+								<h2>How do we know genes are encoded in DNA?</a></h2>
+							  </center>
+                         </div>
+						 -->
+
+                         <div class="blog-post-format">
+                            <!--  <span><a href="about.html#folks"><img src="images/Jenna2.jpg" class="img-responsive img-circle"> JP </a></span> -->
+							<center>
+                              <span style="font-size:15px;"><i class="fa fa-calendar"></i> Jan 23, 2021 </span>
+							</center>
+                            <!--  <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span> -->
+                         </div>
+
+                         <div class="blog-post-des">
+                              <p style="text-align:justify;">What comes to mind when you hear the term “gene editing”? Something out of a science-fiction movie, a dimly lit laboratory with scientists in white coats moving smoky liquids around, injecting patients with questionable fluids, a mutated outcome that no one expected? Gene editing has been popularized in movies like Gattaca and Splice, painting a portrait of gene editing as something sinister, something that can change everything about a person and that can spiral out of control. In November 2018, a researcher in China claimed to have edited the genes of a human embryo that became twin baby girls [1]. That was a highly unethical and technically flawed study, and in 2020 that researcher was sentenced to three years in prison [2] but it brought the process of gene editing into the public eye. In particular, we are talking about a piece of technology broadly known as CRISPR, and while many people have heard this word, there is (understandably!) a lot of confusion about what it is, and what gene editing can do.
+								</p>
+                            <!--  <blockquote>Insert some random quote here. </blockquote> -->
+							  
+							  <p style="text-align:justify;">
+								I listen to a lot of podcasts, and one of my favourites has a loose, conversational format, where a group of friends in their late twenties and early thirties sit around and discuss what’s happened that week, both to them personally and in the world at large. One week, their conversation turned towards CRISPR. These people are not scientists, nor do they claim to be, and I got to hear about this technology in the words of people who do not spend all day, every day, thinking about genes and cells like I do. It was amazing to hear how much about CRISPR had left laboratory discussions and been absorbed by the general public. I also got a much better sense of some of the misconceptions surrounding this technology and its implications. With this post, I’m going to write out some of the statements I heard from the podcast hosts that week, address what they got right and what they got wrong, and hopefully help to make the emerging world of gene editing a little more transparent.
+								</p>
+								
+								</br>
+							  
+							  <p style="text-align:justify;">
+								<strong><i>“CRISPR…so what is this? You can modify your genes?”</i></strong></br>
+								Let’s start by establishing what this system is, and why scientists and doctors are interested in it in the first place.
+								</p>
+								
+								</br>
+								
+							  <p style="text-align:justify;">
+								CRISPR is an acronym. It stands for <i>Clustered Regularly Interspersed Palindromic Repeat</i>. That’s a lot of words that don’t really mean anything at first glance, but it has to do with CRISPR’s evolutionary origin. CRISPR is actually part of the immune system for many bacteria, and it protects them against viral infections [3]. Some viruses are composed of fragments of DNA, and when bacteria are infected with a virus, they can store that viral gene (the DNA sequence) within their own genome. The sequence is stored in specific place in the bacterial genome, called (you guessed it) CRISPR. This process of storing a copy of a viral genome is like taking a mug shot. You know this person has committed a crime in the past, so you take a photo of them and keep it on hand, to more easily recognize them if they try to break the law again. This is what bacteria use their CRISPR system for: they have the viral genome sequence on-hand, which allows them to quickly identify that virus the next time it comes around.
+								</p>
+								
+								<p style="text-align:justify;">
+								Having the viral sequence stored within their CRISPR region lets the bacteria direct a protein, called Cas9, to the virus the next time it sees it. Cas9 is an enzyme, and it will chop the viral DNA to pieces as soon as it recognizes it. <strong>In short, the DNA sequence that’s encoded within CRISPR directs the Cas9 protein to cut up that sequence wherever it finds it.</strong> CRISPR/Cas9 is a naturally occurring system that uses a DNA template to direct an enzyme, Cas9, to make precise cuts at specific genetic targets.
+								</p>
+							  
+							  </br></br>
+							  
+                              <div class="blog-post-image">
+                              <img src="blogposts/Kate_What_is_CRISPR/CRISPR bacteria.png" class="center_blog_post" alt="Blog Image 3" style = "width:500px;height:400px;">
+							  </div>
+							  
+							  <p style="text-align:center;">
+								Figure 1: <strong><i>CRISPR/Cas9 is a kind of bacterial immune system.</i></strong> Bacteria get infected with viruses that are made up of DNA. They can store a copy of the virus’s DNA sequence in their own genome, for future reference, in the CRISPR region. The next time that virus invades, the stored sequence is used as a guide to direct the Cas9 enzyme, which chops up the virus matching its guiding sequence. The Cas9 enzyme cuts any sequence matching its guide, so scientists can use it to cut any gene, in any cell, by writing the sequence and delivering it along with Cas9 to their cell of choice.
+								</p>
+							  
+							  </br></br>
+							  
+							  <p style="text-align:justify;">
+								This is how scientists use CRISPR in the laboratory – we write our own DNA sequences, to direct the Cas9 enzyme to specific places in the human, animal, or bacterial genome. By writing our own sequences to direct Cas9 at will, we can make very precise cuts, to almost any gene. We can turn genes off by cutting them in half, or create space for new ones to be inserted, all by hijacking an ancient immune system from bacteria. Scientists and doctors are interested in this because it could theoretically be used to cure diseases. Illnesses like Huntington’s disease or sickle-cell anemia are actually the result of a <i>single</i> genetic mutation, and that could be corrected using CRISPR/Cas9 [4,5]. Turning a piece of bacterial immunity into an incredible scientific tool is what won Drs. Jennifer Doudna and Emmanuelle Charpentier the 2020 Nobel Prize in Chemistry [3,6].
+								</p>
+								
+							  </br>
+								
+							  <p style="text-align:justify;">
+								<strong><i>“Does it [using CRISPR to edit genes] have to be done to babies?”</br>
+											“Nope, you can do it at any time.”
+											</i></strong></br>
+								The question was asked because of the twin baby girls born in China in 2018, along with claims that they carried genes edited with the CRISPR/Cas9 system [1]. The answer that was given (that you can use CRISPR in a person at any time in their lives) is technically true, but may gloss over some of the larger implications.
+								</p>
+								
+								<p style="text-align:justify;">
+								Human beings, in all our four-limbed, complex glory, arise from a single cell: The embryo. The embryonic cell undergoes rounds and rounds of cell division, splitting into two cells, then four, then eight cells, and on and on until we get all 30 trillion cells that make up our fully formed bodies. Since cell divisions require the parent cell to make a copy of itself before splitting into two daughter cells, the daughter cells will inherit a copy of every gene in the parent cell. And, because all 30 trillion adult cells came from that one embryonic cell, the genes that are in the embryo are in every single cell in our bodies. This is what we call our germline (the lineage that comes from the embryo). Changes to the germline made with CRISPR end up everywhere, including our sperm and egg cells, which means they can even be passed on to our children. This germline edit is the kind of change present in the so-called “CRISPR babies” [1]. For genetic edits to have an effect on the trait a person inherits, like eye colour or whether or not we develop sickle-cell anemia, those edits would have to be made very early in your development. Every cell in the body flows from the embryo, and every gene is inherited from there.
+								</p>
+								
+								<p style="text-align:justify;">
+								This is in contrast to another kind of edit, called <i>somatic</i> (non-germline). This, too, has to do with development. The single, embryonic cell is capable of giving rise to all 30 trillion cells in the body. But adult cells are more specialized, and as they grow they lose the power to make any kind of cell they want. An eye cell will only ever give rise to another eye cell, a skin cell to another skin cell. Cells in the brain have largely stopped dividing to make daughter cells at all [7]. Edits made to the genes in these very specialized parent cells will only be inherited by their very specialized daughter cells. All this is to say that, while yes, you physically can edit a cell’s genes at any time in their life, whether that cell is in an embryo, a baby, or an adult, the effect of that change will differ dramatically. Using CRISPR to change the eye colour gene from blue to brown in an embryo will mean that a person grows up to have brown eyes. Using CRISPR to make that same edit to a fully adult eye cell will have no discernable effect on the person at all.
+								</p>
+							  
+							  </br></br>
+							  
+                              <div class="blog-post-image">
+                              <img src="blogposts/Kate_What_is_CRISPR/germline.png" class="center_blog_post" alt="Blog Image 3" style = "width:500px;height:400px;">
+							  </div>
+							  
+							  <p style="text-align:center;">
+								Figure 2: <strong><i>Edits made at different stages of development have different effects.</i></strong> Changes made very early in development, to the embryonic stem cell, are called germline edits. They will be inherited by every cell in the body, and can drastically affect the traits that are inherited. Somatic edits occur late, when cells are already specialized. These are unlikely to have any discernible effect.
+								</p>
+							  
+							  </br></br>
+							  
+							  <p style="text-align:justify;">
+								The hosts of the podcast I was listening to already had an intuitive grasp of this. The exchange that follows the question <i>“Does using CRISPR to edit genes have to be done to babies?”</i>
+ is:</br>
+<i>“What can it [CRISPR/Cas9] change?”</br>
+“It can unzip your DNA, re-write it, and re-zip it.”</br>
+“So you could just become someone else!”</br>
+“But you are already…made, and like…formed. You’re already you.”</i>
+</p>
+							  
+							  <p style="text-align:justify;">
+								Exactly! You are already you. It’s much too late in your development for edits to single cells to make much of a difference. As the adult that you are, CRISPR (or any other gene editing technology) <i>cannot</i> make you into someone else. It is not magic. It can make very precise changes, to single genes in single cells. Those changes are, in all likelihood, not going to change you.
+								</p>
+
+
+							  <p style="text-align:justify;">
+								A minute later, the conversation turns to medical applications, as one of the hosts makes a joke about wanting to use CRISPR to give herself a tan (again, this would be extremely difficult to do in an adult. You have to make changes to nearly every single skin cell to change the colour of your skin as a whole, since the organ that is your skin is already fully formed). 
+</br><i>“I’d love to CRISPR on a tan.”</br>
+“You could probably just go out in the sun.”</br>
+“Nah, man! Skin cancer! Dangerous!”</br>
+“Yeah but then you could un-CRIPSR the cancer.”</i>
+</p>
+
+							<p style="text-align:justify;">
+								Using CRISPR/Cas9 to cure illnesses like cancer is something that scientists and doctors have thought a lot about. As we discussed already, however, changing genes using CRISPR has the biggest effect if the change is made very early in a person’s development, to ensure that change is inherited by every cell that comes next. This means that <i>curing</i> diseases like cancer after they’ve already formed may not be the best application for gene-editing technology. CRISPR may be better suited to disease <i>prevention</i>, editing out the genes responsible before the cancer arises. There are some well-known mutations that increase a person’s risk for certain kinds of cancer, like mutations to BRCA1/2 and their link to breast and ovarian cancer [8]. CRISPR could be used to edit that gene, from the cancer-predisposing mutant version to the healthy copy. If you did this in an embryo, that person would grow up without the risk of that genetic condition.
+								</p>
+								
+							<p style="text-align:justify;">
+								As you can probably see, however, this only works with diseases that are caused by known genetic mutations, and that are caused by only a few genetic mutations, such that using CRISPR to edit will have any effect on the person’s health. Most human <i>traits</i>, a word that encompasses anything from your height and weight to whether or not you have type II diabetes, are the result of many, <i>many</i> genes acting together, along with the environment around you [9]. CRISPR, in its single-gene-editing capacity, is generally not applicable to these kinds of traits. Finally, and very importantly, I am only discussing here the <i>technical</i> possibilities of CRISPR/Cas9. I haven’t touched on the ethical discussions, or the importance of communication between doctors and the public when thinking about the medical applications of this technology [10]. There are many people who are uncomfortable with the idea of using gene editing technology to prevent illnesses, and it should always be the people receiving care (in this case, patients and their families with genetic predispositions to illnesses) who dictate the way that technology is to be used [11]. If you’re interested in reading less about the science of CRISPR, which I have discussed here, and more about the surrounding ethics, I recommend these pieces to start:</p>
+								<ol style="text-align:justify;">
+								<li>The CRISPR Baby Scandal Gets Worse by the Day. Ed Yong, The Atlantic 2018. <a style="color:#1E90FF" href="https://www.theatlantic.com/science/archive/2018/12/15-worrying-things-about-crispr-babies-scandal/577234/#note">https://www.theatlantic.com/science/archive/2018/12/15-worrying-things-about-crispr-babies-scandal/577234/#note</a></li>
+								</br><li>‘Science is not ready’: China scientist’s gene editing slammed as unethical, dangerous. Rebecca Joseph, November 2018. <a style="color:#1E90FF" href="https://globalnews.ca/news/4703130/gene-editing-babies-ethics-investigation/">https://globalnews.ca/news/4703130/gene-editing-babies-ethics-investigation/</a></li>
+								</br><li>What's next for the CRISPR babies? David Cyranoski, Nature 2018. <a style="color:#1E90FF" href="https://www.nature.com/articles/d41586-019-00673-1">https://www.nature.com/articles/d41586-019-00673-1</a></li>
+								</br><li>“CRISPR babies” are still too risky, says influential panel. Heidi Ledford, Nature 2020. <a style="color:#1E90FF" href="https://www.nature.com/articles/d41586-020-02538-4">https://www.nature.com/articles/d41586-020-02538-4</a></li>
+								</ol>
+							  
+							  <p style="text-align:justify;">
+								As a single-gene-editing technology, there are limits to what CRISPR/Cas9 physically can and cannot be used for. Gene editing is a science like any other, and its applications and outcomes are limited by the biological realities of human development, genetic inheritance, and the role of individual genes on overall human traits. Understanding the way this technology works is an important part of discussing how it should be used, and that’s a conversation that everyone (including non-science podcast hosts!) should be a part of.
+								</p>
+							  
+							  </br></br>
+							  
+							  <h5>REFERENCES</h5>
+							  
+							  <ol style="text-align:justify;">
+								<li>Cyranoski D, Ledford H. Genome-edited baby claim provokes international outcry. Nature. 2018;563(7733):607–8.</li></br>
+								<li>Cyranoski D. What CRISPR-baby prison sentences mean for research. Nature. 2020;16(4):5–5.</li></br>
+								<li>Jinek M, Chylinski K, Fonfara I, Hauer M, Doudna JA, Charpentier E. A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity. Science (80- ). 2012 Aug 17;337(6096):816 LP – 821.</li></br>
+								<li>Monteys AM, Ebanks SA, Keiser MS, Davidson BL. CRISPR/Cas9 Editing of the Mutant Huntingtin Allele In Vitro and In Vivo. Mol Ther. 2017 Jan;25(1):12–23.</li></br>
+								<li>Frangoul H, Altshuler D, Cappellini MD, Chen Y-S, Domm J, Eustace BK, et al. CRISPR-Cas9 Gene Editing for Sickle Cell Disease and β-Thalassemia. N Engl J Med. 2020 Dec 5;</li></br>
+								<li>Fernholm A, Barnes C. THE NOBEL PRIZE IN CHEMISTRY 2020 Genetic scissors : a tool for rewriting the code of life. Nobel Prize. 2020;8.</li></br>
+								<li>Aranda-Anzaldo A. The post-mitotic state in neurons correlates with a stable nuclear higher-order structure. Commun Integr Biol. 2012 Mar 1;5(2):134–9.</li></br>
+								<li>Kuchenbaecker KB, Hopper JL, Barnes DR, Phillips K-A, Mooij TM, Roos-Blom M-J, et al. Risks of Breast, Ovarian, and Contralateral Breast Cancer for BRCA1 and BRCA2 Mutation Carriers. JAMA. 2017 Jun 20;317(23):2402–16.</li></br>
+								<li>Boyle EA, Li YI, Pritchard JK. An Expanded View of Complex Traits: From Polygenic to Omnigenic. Cell. 2017 Jun 15;169(7):1177–86.</li></br>
+								<li>Morrison M, de Saille S. CRISPR in context: towards a socially responsible debate on embryo editing. Palgrave Commun. 2019;5(1):110.</li></br>
+								<li>Funk C, Hefferon M. Public Views of Gene Editing for Babies Depend on How It Would Be Used. Pew Research Centre. 2018;(July).</li></br>
+							  </ol>
+							  
+							<div class="row-md-3 row-sm-3">
+								<i class="fa fa-tag" style="font-size:18px";> <a href = "gallery.html#gallery"><span class = "badge">Cancer Diagnosis & Therapy</span></a>
+								<a><span class = "badge">CRISPR</span></a></i>
+								<a><span class = "badge">gene-editing</span></a></i>
+								<div class="social-icon">
+									 <h5><span class="tab">Share</span>
+								<!--	 <span class="tab"><a href="http://www.facebook.com/sharer.php?u=https://designyourownblog.com/html-and-css-design-bloggers-guide/" class="fa fa-facebook"></a></span> -->
+								<!--	 <a id="linkedin" href="" target="_blank" rel="nofollow""><span class="btn-linkedin btn-lg"><i class="fa fa-linkedin"></i> LinkedIn</span></a> -->
+									 <span class="tab"><iframe id = "fb" src = "" width = "83" height = "28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></span>
+									 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+									 </h5>
+								</div>
+							</div>
+                         
+                            <!--  <h3>What is Personal Blog Theme?</h3>
+                              <p>Nulla tincidunt eu velit elementum accumsan. Vivamus euismod tempor interdum. Vivamus non scelerisque ex, et interdum leo. In bibendum lacus vitae felis egestas, at consectetur metus facilisis. Morbi tellus dolor, porta dignissim enim sit amet, dapibus sagittis erat. In blandit elit sit amet dui aliquet congue nec vel quam. Integer id tristique libero.</p>
+                         -->
+						 </div>
+						 
+                         
+                         
+<!--
+                         <div class="blog-single-post-image">
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image1.jpg" class="img-responsive" alt="Blog Image 1">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image2.jpg" class="img-responsive" alt="Blog Image 2">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <img src="images/blog-image3.jpg" class="img-responsive" alt="Blog Image 3">
+                              </div>
+                         </div>
+                         <p>Aliquam blandit velit nisi, sed fringilla felis lacinia sed. Integer vitae porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tristique lacus. Suspendisse ut tortor vitae risus lacinia tristique. Aliquam sed consectetur libero.</p>
+                         -->
+						 
+						 <div class="blog-author">
+                              <div class="media">
+                                   <div class="media-object pull-left">
+                                        <a href="about.html#folks"><img src="images/Kate.jpg" class="img-circle img-responsive" alt="blog"></a>
+                                   </div>
+                                   <div class="media-body">
+                                        <h3 class="media-heading"><a href="about.html#folks">Kate MacDonald</a></h3>
+                                        <p>Author</p>
+                                   </div>
+                              </div>
+                         </div>
+						 
+<!--
+                         <div class="blog-comment">
+                              <h3>Comments</h3>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/comment-image1.jpg" class="img-responsive img-circle" alt="Blog Image 11">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">David Jones</h3>
+                                             <span>3 days ago</span>
+                                             <p>Aliquam gravida arcu at risus blandit, in interdum metus varius. Cras efficitur, ex sit amet tincidunt rhoncus, dui ex hendrerit risus, ac dapibus ligula mi id leo. In auctor dui justo, ac consequat dui posuere ac.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/comment-image2.jpg" class="img-responsive img-circle" alt="Blog Image 22">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Omar Larus</h3>
+                                             <span>5 days ago</span>
+                                             <p>Maecenas ultricies ante dignissim, iaculis ligula sed, gravida ipsum. Pellentesque lobortis velit mi, sed volutpat enim facilisis.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/author-image2.jpg" class="img-responsive img-circle" alt="Blog Image 33">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Walker Jen</h3>
+                                             <span>July 27, 2017</span>
+                                             <p>In eu posuere nulla, sit amet semper lectus. Aliquam gravida arcu at risus blandit, in interdum metus varius. Cras efficitur, ex sit amet tincidunt rhoncus, dui ex hendrerit risus, ac dapibus ligula mi id leo.</p>
+                                        </div>
+                                   </div>
+                                   <div class="media">
+                                        <div class="media-object pull-left">
+                                             <img src="images/author-image1.jpg" class="img-responsive img-circle" alt="Blog Image 44">
+                                        </div>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Jen Lopez</h3>
+                                             <span>July 24, 2017</span>
+                                             <p>In auctor dui justo, ac consequat dui posuere ac. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur.</p>
+                                        </div>
+                                   </div>
+                         </div>
+-->
+
+			<div class="blog-comment">
+						   <!--   <h3>Comments</h3> -->
+							   <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://gradschooldigest.github.io/gradschooldigest/immune-system-recognizes-damaged-cells.html';  // Replace PAGE_URL with your page's canonical URL variable
+//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gradschooldigest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+						 </div>			
+
+
+                         <div class="blog-comment-form">
+                              <h3>Feedback Form</h3>
+                                   <form action="mailto:gradschooldigest@gmail.com" method="post" enctype="text/plain">
+                           	 	 	 	<input type="text" class="form-control" placeholder="Name" name="name" required>
+                                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="Message" message="message" required="required"></textarea>
+                                        <div class="col-md-3 col-sm-4">
+                                             <input name="submit" type="submit" class="form-control" id="submit" value="Send">
+                                        </div>
+                                   </form>
+                         </div>
+                    </div>
+          </div>
+     </div>
+</section>
+
+<!-- Footer Section -->
+
+<footer>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-5 col-md-offset-1 col-sm-6">
+                    <h3>Grad School Digest</h3>
+                 <!--   <p>elkwqjlqwdoqwj;dfqwk'pdfkqw
+					'dkqw
+					'dkqw'qw;dk;owqkd;oqwkjd;oqw;j mjflqw;jd;lqwjd;wqd;lqwkm;ldqwm;ldmqw;ldm;lqwdm;lqw</p> -->
+                    <div class="footer-copyright">
+                         <p>Copyright &copy; GSD</p>
+                    </div>
+               </div>
+
+               <div class="col-md-4 col-md-offset-1 col-sm-6">
+                    <h3>Reach out</h3>
+                <!--    <p><i class="fa fa-instagram"></i> *insta handle goes here* </p>
+                    <p><i class="fa fa-twitter"></i> *twitter handle goes here* </p> -->
+                    <p><i class="fa fa-envelope"></i> gradschooldigest@gmail.com </p>
+               </div>
+
+               <div class="clearfix col-md-12 col-sm-12">
+                    <hr>
+               </div>
+			<!--
+               <div class="col-md-12 col-sm-12">
+                    <ul class="social-icon">
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-google-plus"></a></li>
+                         <li><a href="#" class="fa fa-dribbble"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+               </div> -->
+               
+          </div>
+     </div>
+</footer>
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
